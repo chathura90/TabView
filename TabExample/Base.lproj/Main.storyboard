@@ -55,14 +55,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-ZH-j5n">
-                                <rect key="frame" x="87" y="299" width="201.5" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-ZH-j5n">
+                                <rect key="frame" x="87" y="299" width="202" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Loaded by ThirdViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-UK-0Vb">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by ThirdViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-UK-0Vb">
                                 <rect key="frame" x="80" y="350" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -71,7 +71,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="j4x-ZH-j5n" firstAttribute="top" secondItem="SOv-hU-geF" secondAttribute="top" constant="279" id="4fR-YG-f2x"/>
+                            <constraint firstItem="j4x-ZH-j5n" firstAttribute="centerX" secondItem="pUv-NM-G9O" secondAttribute="centerX" id="H7O-zV-mvL"/>
+                            <constraint firstItem="j4x-ZH-j5n" firstAttribute="leading" secondItem="SOv-hU-geF" secondAttribute="leading" constant="87" id="WZi-17-OE3"/>
                             <constraint firstItem="kYP-UK-0Vb" firstAttribute="top" secondItem="j4x-ZH-j5n" secondAttribute="bottom" constant="8" symbolic="YES" id="Xtx-Mv-mXd"/>
+                            <constraint firstItem="kYP-UK-0Vb" firstAttribute="leading" secondItem="SOv-hU-geF" secondAttribute="leading" constant="80" id="c2s-xT-PaW"/>
                             <constraint firstItem="kYP-UK-0Vb" firstAttribute="centerX" secondItem="j4x-ZH-j5n" secondAttribute="centerX" id="qKW-XV-Jee"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOv-hU-geF"/>
@@ -103,6 +107,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-R8-wtd">
+                                <rect key="frame" x="80" y="419" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="CCf-is-Yb0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ist-m0-ymp">
+                                <rect key="frame" x="183" y="419" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ActionSheet"/>
+                                <connections>
+                                    <action selector="onActionSheetButtonClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="UhE-Uh-UAf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -117,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="436"/>
+            <point key="canvasLocation" x="789.60000000000002" y="435.83208395802103"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
